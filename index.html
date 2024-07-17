@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi novia?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #ff6666; /* Fondo rojo */
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        #yes {
+            padding: 10px 20px;
+            background-color: lightgreen;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+        }
+        #no {
+            padding: 10px 20px;
+            background-color: lightcoral;
+            border: none;
+            cursor: pointer;
+            margin-left: 90px;
+        }
+    </style>
+    <script>
+        function moveButton() {
+            var btn = document.getElementById("yes");
+            var x = Math.floor(Math.random() * (window.innerWidth - btn.clientWidth));
+            var y = Math.floor(Math.random() * (window.innerHeight - btn.clientHeight));
+            btn.style.left = x + "px";
+            btn.style.top = y + "px";
+        }
+
+        function noClicked() {
+            document.body.innerHTML = "<h1>yo sabia, todas mienten🙄😒</h1>";
+        }
+    </script>
+</head>
+<body>
+    <h1>¿Quieres ser mi novia❤️😍?</h1>
+    <div class="button-container">
+        <button id="yes" onmouseover="moveButton()">Sí</button>
+        <button id="no" onclick="noClicked()">No</button>
+    </div>
+</body>
+</html>
